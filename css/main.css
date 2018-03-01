@@ -266,22 +266,17 @@ header img { margin:0;}
 .sampler a.learn-more { background:#EE7F8D; }
 .tailify a.learn-more { background:#7FDAEE; }
 
-.success-stories .col-img a { position: absolute; right:0; overflow:hidden; }
-.success-stories .col-img img { 
-    width:100%; 
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease 0s;
-	z-index:-1; 
-}
-.success-stories .col-img img:hover { transform:scale(1.1);-ms-transform: scale(1.1); }
+.success-stories .col-img {}
+.success-stories .col-img a { position: absolute; overflow:hidden; display:block; width:100%; height:100% }
+.success-stories .col-img a.img-focus-ss { background-position:center; background-size:cover; transition: all .3s;}
+.success-stories .col-img a:hover { transform: scale(1.2); }
 .success-stories p, .success-stories h2 {
     color: #fff;
 }	
-.success-stories h3, .success-stories h2 { 
-	width:100%; text-align:center; top:15%; position:absolute; z-index:1;
+.success-stories h3{ 
+	width:auto; text-align:center; top:15%; margin-right:-98px; right:50% ;position:absolute; z-index:1;
 }	
-.success-stories h2 { top:40%; font-size:6.5em; letter-spacing:0.2em; font-family:"AvantGarde-Medium" !important; 
+.success-stories h2 { top:40%; font-size:6.5em; letter-spacing:0.2em; font-family:"AvantGarde-Medium" !important; width:100%; text-align:center; position:absolute; z-index:1;
 }	
 
 .success-stories div[class^="col-"] { padding:0; overflow:hidden; }
@@ -460,7 +455,8 @@ header img { margin:0;}
 	.landing-screen .discover-btn { bottom:0; position:inherit; } 
 	.sampler h3, .tailify h3 { top:8%; } 
 	.sampler h2, .tailify h2 { top:25%; font-size:3em;} 
-	.success-stories .col-img a { position:relative; }
+	.success-stories .col-img { min-height:400px; }
+	.success-stories .col-img a { position: absolute; height:100%; }
 	.collaboration .col-img { min-height:315px; line-height:315px; }
 	.collaboration .col-img img { margin:0 auto; position:inherit; top:inherit; vertical-align:inherit; }
 	.ourteam div.left-col { min-height:315px;}
@@ -560,7 +556,7 @@ header img { margin:0;}
 
 /*POUR MES TEST - A SUPPRIMER*/
 @media (min-width: 991px){
-	.success-stories div[class^="col-"], .success-stories .col-img a { height:600px; }
+	.success-stories div[class^="col-"], .success-stories .col-img a { }
 	.sampler .right-col, .tailify .left-col { padding:60px !important; }
 
 }
